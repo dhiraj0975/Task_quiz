@@ -3,10 +3,6 @@ const { Question } = require('../entities/Question');
 const getQuestions = async (req, res) => {
     try {
 
-
-
-
-        
         const questionRepository = AppDataSource.getRepository(Question);
         const questions = await questionRepository.find();
         res.json(questions);
